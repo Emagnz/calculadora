@@ -5,45 +5,78 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0F4F8"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="407dp"
-        android:layout_height="727dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="2dp" >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/num1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_input"
+            android:elevation="4dp"
+            android:hint="@string/desc_num"
+            android:inputType="number"
+            android:padding="16dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/num2"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_input"
+            android:elevation="4dp"
             android:hint="@string/desc_num"
             android:inputType="number"
+            android:padding="16dp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/num1" />
 
+
         <Button
-            android:id="@+id/resto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/resto"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/multiplicacion"
-            app:layout_constraintVertical_bias="0.077" />
+            android:id="@+id/suma"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="#4A90D9"
+            android:text="@string/suma"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:cornerRadius="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/multiplicacion"
+            app:layout_constraintHorizontal_bias="0.004"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/num2" />
+
 
         <Button
             android:id="@+id/multiplicacion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#7B61FF"
             android:text="@string/multiplicacion"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:cornerRadius="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/suma"
@@ -51,61 +84,72 @@
 
         <Button
             android:id="@+id/resta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="171dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#E05C5C"
             android:text="@string/resta"
-            app:layout_constraintBottom_toTopOf="@+id/result"
-            app:layout_constraintEnd_toStartOf="@+id/multiplicacion"
-            app:layout_constraintHorizontal_bias="0.492"
-            app:layout_constraintStart_toEndOf="@+id/suma"
-            app:layout_constraintTop_toBottomOf="@+id/num2"
-            app:layout_constraintVertical_bias="0.5" />
-
-        <Button
-            android:id="@+id/suma"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:text="@string/suma"
-            app:layout_constraintEnd_toStartOf="@+id/multiplicacion"
-            app:layout_constraintHorizontal_bias="0.004"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/num2" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:cornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/multiplicacion"
+            app:layout_constraintTop_toBottomOf="@+id/multiplicacion" />
 
         <Button
             android:id="@+id/division"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="#43B89C"
             android:text="@string/division"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:cornerRadius="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/resta"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/suma"
             app:layout_constraintVertical_bias="0.077" />
 
+
+        <Button
+            android:id="@+id/resto"
+            android:layout_width="158dp"
+            android:layout_height="56dp"
+            android:backgroundTint="#F5A623"
+            android:text="@string/resto"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/result"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/num2"
+            app:layout_constraintVertical_bias="0.748" />
+
         <TextView
             android:id="@+id/result"
-            android:layout_width="197dp"
-            android:layout_height="40dp"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:background="@drawable/rounded_result"
+            android:elevation="4dp"
+            android:gravity="center"
             android:text="@string/resultado"
+            android:textColor="#2D3748"
+            android:textSize="22sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/resta"
             app:layout_constraintVertical_bias="0.5" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/num1"
-            android:layout_width="405dp"
-            android:layout_height="62dp"
-            android:hint="@string/desc_num"
-            android:inputType="number"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <androidx.constraintlayout.widget.Group
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
